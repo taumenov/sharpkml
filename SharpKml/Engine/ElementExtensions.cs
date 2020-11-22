@@ -143,7 +143,7 @@ namespace SharpKml.Engine
 
                 stream.Position = 0;
                 var parser = new Parser();
-                parser.Parse(stream);
+                parser.Parse(stream, false);
                 return parser.Root;
             }
         }
@@ -169,7 +169,7 @@ namespace SharpKml.Engine
 
                 stream.Position = 0;
                 var parser = new Parser();
-                parser.Parse(stream);
+                parser.Parse(stream, false);
 
                 var root = (IconStyle)parser.Root;
                 IconStyle.IconLink output = root.Icon;

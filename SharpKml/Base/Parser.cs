@@ -58,7 +58,7 @@ namespace SharpKml.Base
         /// <exception cref="XmlException">
         /// An error occurred while parsing the XML.
         /// </exception>
-        public void Parse(Stream input, bool namespaces = true)
+        public void Parse(Stream input, bool namespaces = false)
         {
             if (namespaces)
             {
@@ -100,7 +100,7 @@ namespace SharpKml.Base
         /// <exception cref="XmlException">
         /// An error occurred while parsing the XML.
         /// </exception>
-        public void Parse(TextReader input, bool namespaces = true)
+        public void Parse(TextReader input, bool namespaces = false)
         {
             if (namespaces)
             {
@@ -145,7 +145,7 @@ namespace SharpKml.Base
             {
                 if (namespaces)
                 {
-                    this.Parse(stream);
+                    this.Parse(stream, false);
                 }
                 else
                 {

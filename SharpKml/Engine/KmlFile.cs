@@ -266,7 +266,7 @@ namespace SharpKml.Engine
         {
             var parser = new Parser();
             parser.ElementAdded += (s, e) => this.OnElementAdded(e.Element);
-            parser.Parse(input);
+            parser.Parse(input, false);
             this.Root = parser.Root;
         }
     }
